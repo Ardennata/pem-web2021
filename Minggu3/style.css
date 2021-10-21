@@ -1,0 +1,33 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: darkgray;
+}
+
+.judul {
+    text-align: center;
+}
+
+.foto {
+    width: 4cm;
+    height: 6cm;
+    margin-right: 30px;
+}
+
+.biodata {
+    width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    border-top: red 2px solid;
+}
+
+footer {
+    width: 900px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+.porto {
+    text-align: center;
+    align-items: center;
+
+}
