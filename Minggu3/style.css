@@ -13,6 +13,10 @@
     margin-right: 30px;
 }
 
+td {
+    padding-bottom: 5px;
+}
+
 .biodata {
     width: 800px;
     margin: 20px auto;
@@ -26,8 +30,19 @@ footer {
     padding: 15px;
 }
 
-.porto {
+.porto h1 {
     text-align: center;
     align-items: center;
+    font-family: monospace;
+    padding-top: 15px;
+}
 
+.video {
+    align-items: center;
+}
+
+li {
+    float: left;
+    padding: 12px;
+    list-style-type: none;
 }
