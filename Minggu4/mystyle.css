@@ -1,0 +1,16 @@
+th {
+    padding-top: 15px;
+    text-align: left;
+}
+
+.tengah {
+    text-align: center;
+}
+
+.kanan {
+    text-align: right;
+}
+
+* {
+    padding-bottom: 3px;
+}
