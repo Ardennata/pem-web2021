@@ -7,7 +7,8 @@
         <link rel="stylesheet" href="mystyle.css">
     </header>
     <body>
-        <form>
+        <h1>FORMULIR PENDAFTARAN</h1>
+        <form action="proses.php" method="post" name="flatihan">
             <table>
                 <tr>
                     <th>Nomor</th>
@@ -17,14 +18,14 @@
                     <td>1</td>
                     <td><label for="nisn">NISN</label></td>
                     <td>:</td>
-                    <td><input type="number" id="nisn" name="nisn" placeholder="Masukkan NISN" autocomplete="off"></td>
+                    <td><input type="number" id="nisn" name="nisn" placeholder="Masukkan NISN" autocomplete="off" required></td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td><label for="sekolah">Asal Sekolah</label></td>
                     <td>:</td>
                     <td><input list="sekolah" placeholder="Masukkan Asal Sekolah">
-                    <datalist id="sekolah">
+                    <datalist id="sekolah" required>
                         <option value="SMA 1 Semarang"></option>
                         <option value="SMA 2 Semarang"></option>
                         <option value="SMA 3 Semarang"></option>
@@ -43,8 +44,10 @@
                     <td>3</td>
                     <td><label for="tahun">Tahun Lulus <i>(lampirkan foto ijazah)</i></label></td>
                     <td>:</td>
-                    <td><input type="number" id="tahun" name="tahun" placeholder="Tahun Lulus" autocomplete="off"><br><input type="file" id="tahun" name="tahun"></td>
+                    <td><input type="number" id="tahun" name="tahun" placeholder="Tahun Lulus" autocomplete="off" maxlength="4" required><br><input type="file" id="tahun" name="tahun"></td>
                 </tr>
+
+                <!--DATA CALON PESERTA-->
                 <tr>
                     <th colspan="4">DATA CALON PESERTA</th>
                 </tr>
@@ -58,20 +61,19 @@
                     <td>5</td>
                     <td><label for="nik">NIK</label></td>
                     <td>:</td>
-                    <td><input type="number" id="nik" name="nik" placeholder="Masukkan NIK" autocomplete="off"></td>
+                    <td><input type="number" id="nik" name="nik" placeholder="Masukkan NIK" autocomplete="off" required></td>
                 </tr>
                 <tr>
                     <td>6</td>
                     <td><label for="tempat">Tempat Lahir</label></td>
                     <td>:</td>
-                    <td><input type="text" id="tempat" name="tempat" placeholder="Tempat lahir" autocomplete="off"></td>
+                    <td><input type="text" id="tempat" name="tempat" placeholder="Tempat lahir" autocomplete="off" required></td>
                 </tr>
                 <tr>
                     <td>7</td>
                     <td><label for="tanggal">Tanggal Lahir</label></td>
                     <td>:</td>
-                    <td><input type="date" id="tanggal" name="tanggal"><input type="file" id="akte" name="akte"></td>
-
+                    <td><input type="date" id="tanggal" name="tanggal"><input type="file" id="akte" name="akte" required></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -92,58 +94,61 @@
                     <td>9</td>
                     <td><label for="alamat">Alamat</label></td>
                     <td>:</td>
-                    <td><textarea id="alamat" name="alamat" placeholder="Alamat Rumah"></textarea></td>
+                    <td><textarea id="alamat" name="alamat" placeholder="Alamat Rumah" required></textarea></td>
                 </tr>
                 <tr>
                     <td>10</td>
                     <td class="kanan"><label for="desa">Desa/Kelurahan</label></td>
                     <td>:</td>
-                    <td><input type="text" id="desa" name="desa" placeholder="Desa/Kelurahan"></td>
+                    <td><input type="text" id="desa" name="desa" placeholder="Desa/Kelurahan" required></td>
                 </tr>
                 <tr>
                     <td>11</td>
                     <td class="kanan"><label for="kecamatan">Kecamatan</label></td>
                     <td>:</td>
-                    <td><input type="text" id="kecamatan" name="kecamatan" placeholder="Kecamatan"></td>
+                    <td><input type="text" id="kecamatan" name="kecamatan" placeholder="Kecamatan" required></td>
                 </tr>
                 <tr>
                     <td>12</td>
                     <td class="kanan"><label for="kabupaten">Kabupaten</label></td>
                     <td>:</td>
-                    <td><input type="text" id="kabupaten" name="kabupaten" placeholder="Kabupaten"></td>
+                    <td><input type="text" id="kabupaten" name="kabupaten" placeholder="Kabupaten" required></td>
                 </tr>
                 <tr>
                     <td>13</td>
                     <td class="kanan"><label for="provinsi">Provinsi</label></td>
                     <td>:</td>
-                    <td><input type="text" id="provinsi" name="provinsi" placeholder="Provinsi"></td>
+                    <td><input type="text" id="provinsi" name="provinsi" placeholder="Provinsi" required></td>
                 </tr>
                 <tr>
                     <td>14</td>
                     <td><label for="email">Email Aktif</label></td>
                     <td>:</td>
-                    <td><input type="email" id="email" name="email" placeholder="Email"></td>
+                    <td><input type="email" id="email" name="email" placeholder="email@email.com" required></td>
                 </tr>
+
+                <!--DATA ORANG TUA-->
                 <tr>
-                    <th colspan="4"><label for="kk">DATA ORANG TUA <i>(lampirkan KK)</i></label><br><input type="file" id="kk" name="kk"></th>
+                    <th colspan="4"><label for="kk">DATA ORANG TUA <i>(lampirkan KK)</i></label><br><input type="file" id="kk" name="kk" required></th>
                 </tr>
                 <tr>
                     <td>15</td>
                     <td><label for="nomorkk">Nomor Kartu Keluarga</label></td>
                     <td>:</td>
-                    <td><input type="number" id="nomorkk" name="nomorkk" placeholder="Nomor KK"></td>
+                    <td><input type="number" id="nomorkk" name="nomorkk" placeholder="Nomor KK" required></td>
                 </tr>
                 <tr>
                     <td>16</td>
                     <td><label for="ayah">Nama Ayah Kandung</label></td>
                     <td>:</td>
-                    <td><input type="text" id="ayah" name="ayah" placeholder="Nama Ayah"></td>
+                    <td><input type="text" id="ayah" name="ayah" placeholder="Nama Ayah" required></td>
                 </tr>
                 <tr>
                     <td>17</td>
                     <td><label for="agamaayah">Agama</label></td>
                     <td>:</td>
-                    <td><select id="agamaayah" name="agamaayah">
+                    <td><select id="agamaayah" name="agamaayah" required>
+                        <option value="">Pilih::</option>
                         <option value="kristen">Kristen</option>
                         <option value="islam">Islam</option>
                         <option value="hindu">Hindu</option>
@@ -156,19 +161,20 @@
                     <td>18</td>
                     <td><label for="pekerjaanayah">Pekerjaan Ayah</label></td>
                     <td>:</td>
-                    <td><input type="text" id="pekerjaanayah" name="pekerjaanayah" placeholder="Pekerjaan Ayah"></td>
+                    <td><input type="text" id="pekerjaanayah" name="pekerjaanayah" placeholder="Pekerjaan Ayah" required></td>
                 </tr>
                 <tr>
                     <td>19</td>
                     <td><label for="ibu">Nama Ibu Kandung</label></td>
                     <td>:</td>
-                    <td><input type="text" id="ibu" name="ibu" placeholder="Nama Ibu"></td>
+                    <td><input type="text" id="ibu" name="ibu" placeholder="Nama Ibu" required></td>
                 </tr>
                 <tr>
                     <td>20</td>
                     <td><label for="agamaibu">Agama</label></td>
                     <td>:</td>
-                    <td><select id="agamaibu" name="agamaibu">
+                    <td><select id="agamaibu" name="agamaibu" required>
+                        <option value="">Pilih::</option>
                         <option value="kristen">Kristen</option>
                         <option value="islam">Islam</option>
                         <option value="hindu">Hindu</option>
@@ -181,40 +187,40 @@
                     <td>21</td>
                     <td><label for="pekerjaanibu">Pekerjaan Ibu</label></td>
                     <td>:</td>
-                    <td><input type="text" id="pekerjaanibu" name="pekerjaanibu" placeholder="Pekerjaan Ibu"></td>
+                    <td><input type="text" id="pekerjaanibu" name="pekerjaanibu" placeholder="Pekerjaan Ibu" required></td>
                 </tr>
                 <tr>
                     <td>22</td>
                     <td><label for="alamatortu">Alamat Orang Tua</label></td>
                     <td>:</td>
-                    <td><textarea type="text" id="alamatortu" name="alamatortu" placeholder="Alamat Rumah"></textarea></td>
+                    <td><textarea type="text" id="alamatortu" name="alamatortu" placeholder="Alamat Rumah" required></textarea></td>
                 </tr>
                 <tr>
                     <td>23</td>
                     <td class="kanan"><label for="desaortu">Desa/Kelurahan</label></td>
                     <td>:</td>
-                    <td><input type="text" id="desaortu" name="desaortu" placeholder="Desa/Kelurahan"></td>
+                    <td><input type="text" id="desaortu" name="desaortu" placeholder="Desa/Kelurahan" required></td>
                 </tr>
                 <tr>
                     <td>24</td>
                     <td class="kanan"><label for="kecamatanortu">Kecamatan</label></td>
                     <td>:</td>
-                    <td><input type="text" id="kecamatanortu" name="kecamatanortu" placeholder="Kecamatan"></td>
+                    <td><input type="text" id="kecamatanortu" name="kecamatanortu" placeholder="Kecamatan" required></td>
                 </tr>
                 <tr>
                     <td>25</td>
                     <td class="kanan"><label for="kabupatenortu">Kabupaten</label></td>
                     <td>:</td>
-                    <td><input type="text" id="kabupatenortu" name="kabupatenortu" placeholder="Kabupaten"></td>
+                    <td><input type="text" id="kabupatenortu" name="kabupatenortu" placeholder="Kabupaten" required></td>
                 </tr>
                 <tr>
                     <td>26</td>
                     <td class="kanan"><label for="provinsiortu">Provinsi</label></td>
                     <td>:</td>
-                    <td><input type="text" id="provinsiortu" name="provinsiortu" placeholder="Provinsi"></td>
+                    <td><input type="text" id="provinsiortu" name="provinsiortu" placeholder="Provinsi" required></td>
                 </tr>
             </table>
-            <input type="submit" value="Kirim" width="1000px">
+            <input class="kumpul" type="submit" value="Kirim" width="1000px">
         </form>
     </body>
 </html>
