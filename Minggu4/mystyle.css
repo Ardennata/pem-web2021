@@ -24,6 +24,7 @@ th {
 .kumpul {
     float: right;
     margin-right: 900px;
+    background-color: red;
 }
 
 textarea {
@@ -48,4 +49,9 @@ datalist {
 
 body {
     margin-left: 100px;
+}
+
+.kumpul:hover {
+    background-color: pink;
+    cursor: pointer;
 }
