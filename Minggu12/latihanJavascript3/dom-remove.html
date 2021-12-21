@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM API Javascript</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
+  <body>
+    <h2 id="judul12">Delete saya!</h2>
+
+    <script>
+      // memilih elemen berdasarkan ID
+      var h2 = document.getElementById('judul12');
+
+      //menghapus elemen yang sudah dipilih
+      h2.remove();
+
+      console.log('Element Sudah dihapus');
+      console.log(h2);
+    </script>
+  </body>
+</html>

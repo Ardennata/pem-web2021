@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Latihan</title>
+  </head>
+  <body>
+    <p class="paragraf">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laboriosam eum velit amet, blanditiis soluta maiores consectetur reprehenderit eius ipsum nostrum unde aut minus dicta dolore! Veritatis suscipit consequuntur quaerat!
+    </p>
+    <p class="paragraf">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores dolorum maxime quibusdam, voluptatum commodi pariatur ab illo magni in! Totam perferendis quis sint cumque soluta aperiam repudiandae commodi accusantium pariatur?
+    </p>
+    <p class="paragraf">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores dolorum maxime quibusdam, voluptatum commodi pariatur ab illo magni in! Totam perferendis quis sint cumque soluta aperiam repudiandae commodi accusantium pariatur?
+    </p>
+
+    <script>
+      var paragraf = document.getElementsByClassName('paragraf');
+      setInterval(function () {
+        paragraf[0].style.color = 'red';
+        paragraf[1].style.color = 'green';
+        paragraf[2].style.color = 'blue';
+
+        setTimeout(function () {
+          paragraf[0].style.color = 'black';
+          paragraf[1].style.color = 'black';
+          paragraf[2].style.color = 'black';
+        }, 500);
+      }, 1000);
+    </script>
+  </body>
+</html>
