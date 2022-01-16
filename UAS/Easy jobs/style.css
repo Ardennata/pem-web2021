@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.welcome {
+  background-color: azure;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  padding-bottom: 1px;
+}
+.col-4 h2 {
+  margin-top: 20px;
+}
+
+.keamanan {
+  display: inline-block;
+  border-radius: 50%;
+  margin: auto;
+  background-color: rgb(5, 255, 5);
+  width: 100px;
+  height: 100px;
+}
+
+.ayo {
+  font-size: 70px;
+}
+
+.tombol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 30vh;
+}
+
+.tombol .btn {
+  width: 300px;
+  padding: 10px 30px;
+  border: 2px solid red;
+  position: relative;
+  display: inline-block;
+  color: red;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.tombol .btn:hover {
+  color: white;
+}
+
+.tombol .btn span {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: red;
+  transition: width 0.5s, height 0.5s;
+  z-index: -1;
+}
+
+.tombol .btn:hover span {
+  width: 700px;
+  height: 700px;
+}
+
+.body {
+  display: grid;
+  height: 150px;
+  width: 100%;
+  place-items: center;
+  background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}
+
+.body .wrapper .button {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 0 5px;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 50px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+}
+
+.body .wrapper .button .icon {
+  display: inline-block;
+  text-align: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+
+.body .wrapper .button:nth-child(1):hover .icon {
+  background-color: #4267b2;
+}
+.body .wrapper .button:nth-child(2):hover .icon {
+  background-color: #c32aa3;
+}
+.body .wrapper .button:nth-child(3):hover .icon {
+  background-color: #ff0000;
+}
+
+.body .wrapper .button:hover {
+  width: 200px;
+}
+
+.body .wrapper .button .icon a {
+  text-decoration: none;
+  font-size: 25px;
+  line-height: 60px;
+}
+
+.body .wrapper .button span {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+}
+
+.body .wrapper .button span a {
+  text-decoration: none;
+}

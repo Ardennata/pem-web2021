@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #d7e1ec;
+  overflow: hidden;
+}
+
+nav {
+  display: flex;
+  background-color: black;
+  color: rgb(206, 206, 206);
+  justify-content: space-around;
+  height: 65px;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 25px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  text-decoration: none;
+  margin-left: 20px;
+  color: rgb(206, 206, 206);
+}
+
+nav ul li a:hover {
+  color: white;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 4;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: rgb(206, 206, 206);
+  border-radius: 3px;
+  transition: all 0.3s;
+  z-index: 3;
+}
+
+/* Hamburger menu Animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: white;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: white;
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.container {
+  max-width: 440px;
+  padding: 0 20px;
+  margin: 170px auto;
+}
+
+.wrapper {
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.wrapper .title {
+  line-height: 90px;
+  background: #1a80ac;
+  padding-left: 20px;
+  border-radius: 5px 5px 0 0;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
+.wrapper form {
+  padding: 30px 25px 25px 25px;
+}
+
+.wrapper form .row {
+  height: 45px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.wrapper form .row input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 60px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+form .row input:focus {
+  border-color: #1a80ac;
+  box-shadow: inset 0px 0px 2px 2px #1a80ac 0.2;
+}
+
+.wrapper form .row i {
+  position: absolute;
+  width: 47px;
+  height: 100%;
+  color: #fff;
+  font-size: 18px;
+  background: #1a80ac;
+  border: 1px solid #1a80ac;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px 0 0 5px;
+}
+
+.wrapper form .pass {
+  margin: -8px 0 20px 0;
+}
+
+.wrapper form .pass a {
+  color: #1a80ac;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.wrapper form .button input {
+  padding-left: 0px;
+  background: #1a80ac;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid #1a80ac;
+}
+
+form .button input:hover {
+  background-color: #125875;
+}
+
+.wrapper form .signup-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 13px;
+}
+.wrapper form .signup-link a {
+  color: #1a80ac;
+  text-decoration: none;
+}
+
+.wrapper form .signup-link a:hover {
+  color: blue;
+}
+
+/* Responsif */
+/* ukuran tablet */
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 2;
+  }
+}
